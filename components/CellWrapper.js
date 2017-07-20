@@ -8,7 +8,7 @@ var {Component, PropTypes} = React;
 class CellWrapper extends Component {
 
   componentDidMount() {
-    this.props.updateTag && this.props.updateTag(this.refs.view.getNodeHandle(), this.props.sectionId);
+    this.props.updateTag && this.props.updateTag(ReactNative.findNodeHandle(this.refs.view), this.props.sectionId);
   }
 
   render() {

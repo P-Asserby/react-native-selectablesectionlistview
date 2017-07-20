@@ -136,6 +136,7 @@ class SelectableSectionsListView extends Component {
         sectionId={sectionId}
         sectionData={sectionData}
         updateTag={updateTag}
+        sectionHeaderContainerStyle={this.props.sectionHeaderContainerStyle}
       />
     );
   }
@@ -375,6 +376,12 @@ SelectableSectionsListView.propTypes = {
    * Styles to pass to the section list container
    */
   sectionListStyle: stylesheetProp
+
+
+  /**
+   * Styles to pass to the sectionHeader container
+   */
+  sectionHeaderContainerStyle: stylesheetProp
 
 };
 

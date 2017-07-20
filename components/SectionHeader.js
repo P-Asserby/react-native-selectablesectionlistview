@@ -7,7 +7,7 @@ var {Component, PropTypes} = React;
 class SectionHeader extends Component {
 
   componentDidMount() {
-    this.props.updateTag && this.props.updateTag(this.refs.view.getNodeHandle(), this.props.sectionId);
+    this.props.updateTag && this.props.updateTag(ReactNative.findNodeHandle(this.refs.view), this.props.sectionId);
   }
 
   render() {
@@ -17,7 +17,7 @@ class SectionHeader extends Component {
       <Text style={styles.text}>{this.props.title}</Text>;
 
     return (
-      <View ref="view" style={styles.container}>
+      <View ref="view" style={this.props.sectionHeaderContainerStyle}>
         {content}
       </View>
     );
